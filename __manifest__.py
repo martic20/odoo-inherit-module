@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "a1-martic20",
+    'name': "a2-martic20",
 
     'summary': """
         Tercer intent de mòdul, aquest funcionarà""",
 
     'description': """
-        Descripció molt molt llarga
+        Mòdul per practicar herència en Odoo
     """,
 
     'author': "martic20",
@@ -19,7 +19,7 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base'],
+    'depends': ['a1'],
 
     # always loaded
     'data': [
