@@ -23,10 +23,10 @@
 
     # always loaded
     'data': [
-        'security/todo_access_rules.xml',
-        'security/ir.model.access.csv',
-        'views/todo_menu.xml',
-        'views/todo_view.xml',
+        #'security/todo_access_rules.xml',
+        #'security/ir.model.access.csv',
+        'views/todo_task.xml',
+        #'views/todo_view.xml',
         #'views/templates.xml',
     ],
     # only loaded in demonstration mode
