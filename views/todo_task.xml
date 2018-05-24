@@ -23,6 +23,7 @@
 				domain="[('user_id','=',False)]" />
 			</field>
 		</field>
-	</record>		
+	</record>	
+		
 
 </odoo>
