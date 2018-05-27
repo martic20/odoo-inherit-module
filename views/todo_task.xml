@@ -5,7 +5,7 @@
 			<field name="model">todo.task</field>
 			<field name="inherit_id" ref="a1.view_tree_todo_task"/>
 			<field name="arch" type="xml">
-				<field name="name" position="after">
+				<field name="name" expr="//group/field[@name='name']" position="after">
 				<field name="user_id" />
 			</field>
 		</field>
@@ -24,6 +24,36 @@
 			</field>
 		</field>
 	</record>	
-		
+	<record id="a1.menu_todo_task" model="ir.ui.menu">
+		<field name="name">My To-Do</field>
+	</record>
+	<record model="ir.actions.act_window" id="a1.action_todo_task">
+		<field name="context">
+			{'search_default_filter_my_tasks': True}
+		</field>
+	</record>
+
+	<record id="view_form_todo_task_inherited" model="ir.ui.view">
+		<field name="name">Todo Task form - User extension</field>
+		<field name="model">todo.task</field>
+		<field name="inherit_id" ref="a1.view_form_todo_task"/>
+		<field name="arch" type="xml">
+			<field name="name" expr="//group/field[@name='name']" position="after">
+				<field name="user_id"/>
+			</field>
+			<field name="is_done" expr="//group/field[@name='name']" position="after">
+				<field name="date_deadline"/>
+			</field>
+			<field name="active" position="attributes">
+				<attribute name="invisible">1</attribute>
+			</field>
+			<field name="name" expr="//group/field[@name='name']" position="after">
+				<field name="message_follower_ids" widget="mail_followers" />
+			</field>
+			<field name="name" expr="//group/field[@name='name']" position="after">
+				<field name="message_ids" widget="mail_thread" />
+			</field>
+		</field>
+	</record>
 
 </odoo>

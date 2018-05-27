@@ -19,11 +19,11 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['a1'],
+    'depends': ['a1','mail'],
 
     # always loaded
     'data': [
-        #'security/todo_access_rules.xml',
+        'security/todo_access_rules.xml',
         'security/ir.model.access.csv',
         'views/todo_task.xml'
         #'views/todo_view.xml',
